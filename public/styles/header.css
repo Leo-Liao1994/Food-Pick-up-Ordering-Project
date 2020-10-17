@@ -29,8 +29,12 @@ float: right;
   margin-bottom: 20px;
 }
 
-a {
-  border-bottom: 2px solid #a0c79d;
+
+
+.main-nav li a:hover,
+.main-nav li a:active{
+  padding-bottom  :10px;
+  border-bottom: 2px solid #a0c79d ;
 }
 
 
@@ -40,7 +44,9 @@ a {
   color:white;
   font-size:20px;
   display:inline-block;
-  margin-top:10px
+  margin-top: 5%;
+  margin-right: 7px;
+
 }
 
 .background-img {
