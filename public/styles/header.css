@@ -9,7 +9,7 @@ header {
   background-attachment: fixed;
 }
 
-.logo{
+.logo {
   width:10em;
   height:10em;
   margin-left:10px;
@@ -17,11 +17,11 @@ header {
 
 }
 
-.main-nav{
+.main-nav {
 float: right;
 }
 
-.main-nav li{
+.main-nav li {
   color:white;
   font-size:20px;
   display:inline-block;
@@ -29,14 +29,13 @@ float: right;
   margin-bottom: 20px;
 }
 
-a{
-  border-bottom: 2px solid #b4d3b2;
-
+a {
+  border-bottom: 2px solid #a0c79d;
 }
 
 
 
-.main-nav li{
+.main-nav li {
   font-family: "Montserrat";
   color:white;
   font-size:20px;
@@ -44,7 +43,7 @@ a{
   margin-top:10px
 }
 
-.background-img{
+.background-img {
   position: absolute;
   left: 0;
   top: 0;
