@@ -1,0 +1,45 @@
+
+
+header {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../images/background-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.2)), url(../images/background-img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.logo{
+  width:10em; height:10em;
+}
+
+.main-nav{
+float: right;
+}
+
+.main-nav li{
+  color:white;
+  font-size:20px;
+  display:inline-block;
+  width:10em;
+  height:10em;
+}
+
+
+
+.main-nav li{
+  color:white;
+  font-size:20px;
+  display:inline-block;
+  margin-top:10px
+
+}
+
+.background-img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  }

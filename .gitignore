@@ -1,5 +1,5 @@
 node_modules/
-public/styles
+# public/styles    remove the comment once the project is done
 .env
 *.log
 *.sqlite3
