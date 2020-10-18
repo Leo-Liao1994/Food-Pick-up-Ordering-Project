@@ -1,7 +1,7 @@
 body {
-  background-color: black;
-  color:white;
-  font-family: "Montserrat";
+  background-color: #EEE;
 }
 
-
+body h1 {
+  color: #244751;
+}
