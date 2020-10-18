@@ -38,7 +38,7 @@ float: right;
 
 
 .main-nav li a:hover,
-.main-nav li a:active{
+.main-nav li a:active {
   padding-bottom  :10px;
   border-bottom: 2px solid #a0c79d ;
 }
