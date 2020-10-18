@@ -56,3 +56,7 @@ float: right;
   height: auto;
   opacity: 0.7;
   }
+
+  nav.navbar {
+    box-shadow: none;
+  }
