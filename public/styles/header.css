@@ -5,13 +5,15 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  margin-bottom: 30px;
 }
 
 .headertext{
+  color:#eee;
   font-family: "Lobster";
   position: absolute;
   font-size:80px;
-  top:50%;
+  top:57%;
   margin-left: 2%;
 }
 

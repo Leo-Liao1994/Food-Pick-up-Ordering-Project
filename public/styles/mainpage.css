@@ -1,5 +1,17 @@
-body {
+.main {
   background-color: black;
   color:white;
   font-family: "Montserrat";
 }
+
+
+.subtitle{
+  padding-top: 5px;
+  color:#EEE;
+  display: flex;
+  justify-content: center;
+  font-family: "Lobster";
+  text-decoration: underline;
+  text-decoration-color: red;
+  }
+

@@ -4,23 +4,20 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  margin-bottom: 30px;
+
 }
 
-.subtitle{
-  display: flex;
-  justify-content: center;
-  font-family: "Lobster";
-}
+
 
 .submenu1{
-  margin-left:8%;
+  margin-top: 5%;
+  margin-left:10%;
 }
 
 
 
 .menuitem{
-  border-right: 2px solid #a0c79d;
-
   padding:20px;
 }
 
