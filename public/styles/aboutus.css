@@ -1,0 +1,33 @@
+.aboutUs{
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../images/menu_bg_img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.2)), url(../images/menu_bg_img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
+.description{
+  text-align: center;
+  font-size: 20px;
+  padding-top:5%;
+  margin: auto;
+  width:80%;
+}
+
+.col1{
+  display: block;
+  float: left;
+}
+.col2{
+  display: block;
+  float: right;
+}
+
+.col1{
+  display: block;
+  float:center;
+}
+
+
+
