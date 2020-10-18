@@ -1,11 +1,18 @@
 
 header {
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../images/background-img.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.2)), url(../images/background-img.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../images/background-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.1)), url(../images/background-img.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
-  background-attachment: fixed;
+}
+
+.headertext{
+  font-family: "Lobster";
+  position: absolute;
+  font-size:80px;
+  top:50%;
+  margin-left: 2%;
 }
 
 .logo {
@@ -49,7 +56,6 @@ float: right;
 }
 
 .background-img {
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
