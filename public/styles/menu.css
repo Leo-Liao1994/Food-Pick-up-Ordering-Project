@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+
 }
 
 
@@ -24,11 +25,7 @@
 
 .menu-img{
   width:200px;
-  margin:1%;
-}
-
-.first{
-  margin-left:17%;
+  margin-left:100%;
 }
 
 
@@ -40,6 +37,51 @@
   border: 2px solid #233529;
   color: #fff;
   margin-left:41.5%;
-  margin-top:2.5%
+  margin-top:12.5%
 
+}
+
+
+.content_img{
+  position: relative;
+  width: 10%;
+  height: 200px;
+  float:left;
+  margin-left: 7.25%;
+ }
+
+
+
+ .content_img div{
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+ }
+
+ .content_img:hover{
+  cursor: pointer;
+ }
+
+ .content_img:hover div{
+  margin-left: 150px;
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.9;
+ }
+
+ .text1{
+
+   margin-left:120px;
+ }
+
+ .text2{
+
+  margin-left:120px;
 }
