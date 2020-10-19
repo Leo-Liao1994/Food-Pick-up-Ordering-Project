@@ -2,25 +2,32 @@
 GET /
 GET /menu
 GET /register
-GET /sign-in
-GET /users/user:id
-GET /users/user:id/order
-GET /users/user:id/order/confirmation/pickup
+GET /login
+GET /users/:user_id
 
-<!-- GET /order/edit
-GET /order/delete -->
-<!-- GET /location
-GET/ about-us -->
+<!-- GET /users/:user_id/orders
+GET /users/:user_id/orders/:order_id -->
+
+GET /orders
+GET /orders/:order_id
 
 
 ## POST Routes
 POST /register
 POST /login
 POST /logout
-POST /users/user:id/order       <!--confirmation-->
 
-<!-- POST /order/edit
-POST /order/delete -->
+<!-- POST /users/:user_id/orders      confirmation -->
 
+POST /orders      <!--confirmation-->
 
 ## PUT Routes
+<!-- PUT /users/:user_id/orders/:order_id     <!--to update the state of an order> -->
+
+PUT /orders/:order_id 
+
+
+## DELETE Routes
+<!-- DELETE /users/:user_id/orders/:order_id/ -->
+
+DELETE /orders/:order_id/

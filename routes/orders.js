@@ -6,10 +6,11 @@
  */
 
 const express = require('express');
-const router = express.Router();
+const orders = express.Router();
 
 module.exports = (db) => {
-  router.get("/", (req, res) => {
+
+  orders.get("/", (req, res) => {
     db.query(`SELECT * FROM users;`)
       .then(data => {
         const users = data.rows;
@@ -21,6 +22,14 @@ module.exports = (db) => {
           .json({ error: err.message });
       });
   });
-  return router;
-};
 
+  orders.post("/")
+
+  orders.get("/:order_id")
+
+  orders.put("/:order_id")
+
+  orders.delete("/:order_id")
+
+  return orders;
+};
