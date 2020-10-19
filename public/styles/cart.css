@@ -27,3 +27,40 @@ body{
   padding-left: 0;
   padding-right: 0;
 }
+
+
+
+
+.content {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #ffffff;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 3px 0 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+}
+
+.cart-row {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #ffffff;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
