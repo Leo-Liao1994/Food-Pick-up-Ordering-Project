@@ -1,6 +1,6 @@
 header {
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.1)), url(https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../images/background-img-cart.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.1)), url(../images/background-img-cart.jpeg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -10,6 +10,15 @@ body{
   background:#eee;
   font-family: "montserrat";
 }
+
+.container {
+  top: 5em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .btn-primary {
   color: #fff;
@@ -63,4 +72,12 @@ body{
   border-image: none;
   border-style: solid solid none;
   border-width: 1px 0;
+}
+
+.cart-product-image {
+  text-align: center;
+  padding-top: 30px;
+  height: 80px;
+  width: 80px;
+  background-color: #f8f8f9;
 }
