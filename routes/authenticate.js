@@ -67,9 +67,21 @@ module.exports = (db) => {
       })
   });
 
+
+
+
+
   auth.post("/login");
 
-  auth.post("/logout");
+
+
+
+
+  auth.post("/logout", (req, res) => {
+    req.session.userId = null;
+    res.send({});
+  });
+
 
   return auth;
 
