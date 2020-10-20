@@ -5,18 +5,8 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
-const express = require('express');
 const auth = express.Router();
 const database = require("../database");
-
-const app = express();
-
-//encrypted cookies
-const cookieSession = require('cookie-session');
-app.use(cookieSession({
-  name: 'session',
-  keys: ["key1", "key2"],
-}));
 
 
 //hashed passwords
@@ -55,6 +45,7 @@ module.exports = (db) => {
           res.send({ error: 'User already exists! Please login!' });
           return;
         }
+        console.log("request session is:", req.session);
         req.session.userId = user.id;
         res.send({ user: { name: user.name, email: user.email, phone: user.phone, id: user.id } });
       })
@@ -90,7 +81,6 @@ module.exports = (db) => {
       })
       .catch(error => res.send(error));
   });
-
 
 
 
