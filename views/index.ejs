@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/menu.css" type="text/css" />
   <link rel="stylesheet" href="/styles/aboutus.css" type="text/css" />
-
-
   <link rel="stylesheet" href="/styles/login.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/mainpage.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/grid.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/location.css" type="text/css" />
+
 
 
 
@@ -29,6 +31,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- W3school-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -46,11 +50,13 @@
 </head>
 
 <body>
+  <section class ="main">
   <header>
     <nav class="navbar">
         <img class="logo" src="../images/logo.png">
         <ul class = "main-nav">
-          <li> <a href="#myModal" class="trigger-btn" data-toggle="modal">Sign in</a> </li>
+          <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal">Login</a> </li>
+          <li> <a href="#myModalRegister" class="trigger-btn" data-toggle="modal">Sign up</a></li>
           <li> <a herf = "#">Menu</a> </li>
           <li> <a herf = "#">About us</a> </li>
           <li> <a herf = "#">Location</a> </li>
@@ -60,27 +66,27 @@
     </header>
 
     <section class="menu">
-      <h1 class="subtitle"> Menu <br></h1>
-      <div class="divide">
-      <section class="submenu1">
-        <h2>Cakes</h2>
-        <li class="menuitem"> <a>Mixed berry mousse cheesecake............................................. $18.99</a> </li>
-        <li class="menuitem"> <a>Motcha cheesecake................................................................ $18.99</a> </li>
-        <li class="menuitem"> <a>chocolate lava cake................................................................ $38.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................. $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................. $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................. $8.99</a> </li>
-      </section>
-      <section class="submenu1">
-        <h2>SOMETHING IDK</h2>
-        <li class="menuitem"> <a>creme brule............................................................................. $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................ $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................ $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................ $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................ $8.99</a> </li>
-        <li class="menuitem"> <a>Mixed berry mousse................................................................ $8.99</a> </li>
-      </section>
-            </div>
+      <h1 class="subtitle"> Our Signature dessert <br></h1>
+      <p class = "slogan">We beat it, you eat it! </p>
+        <div class="content_img">
+          <img  class = "menu-img first"src="../images/Matcha .jpeg">
+          <div class="text1">Image 1 Text</div>
+         </div>
+         <div class="content_img">
+          <img  class = "menu-img second"src="../images/Cherry cheesecake slices.jpeg">
+          <div class="text">Image 2 Text</div>
+         </div>
+         <div class="content_img">
+          <img  class = "menu-img third"src="../images/Creme-Brulee.jpg">
+          <div>Image 3 Text</div>
+         </div>
+         <div class="content_img">
+          <img  class = "menu-img fouth"src="../images/Rosewater Panna Cotta _ Queen Fine Foods.jpeg">
+          <div>Image 4 Text</div>
+
+      </div>
+
+      <a class="btn btn-full" href="#">Check out the full menu</a>
     </section>
 
 
@@ -88,69 +94,168 @@
       <h1 class="subtitle"> About Us <br></h1>
       <p class = "description">&nbsp &nbsp Delights is one of the few fine dessert place in the Greater Toronto Area.
        We are located in Vaughan and known as “The city above Toronto”.
-        Our team have taken great pride in serving our community for the past 70 years and will continue for the next 70 years</p>
+        Our team have taken great pride in serving our community for the past 70 years </p>
 
+        <div class="reviews">
         <div class = "row">
-          <h2>Hear what our customer says</h2>
+          <h2 class ="customerReview">Hear what our customer says</h2>
       </div>
+      <div class ="cols">
           <div class="col1">
               <blockquote>
-              Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
               </blockquote>
-              <cite><img src="resources/css/img/customer-1.jpg">Alberto Duncan</cite>
+              <cite><img src="../images/random_user1.jpg">Alberto Duncan</cite>
           </div>
           <div class="col2">
               <blockquote>
-              Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+              <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
               </blockquote>
-              <cite><img src="resources/css/img/customer-2.jpg">Joana Silva</cite>
+              <cite><img src="../images/random_user2.jpg">Joana Silva</cite>
           </div>
 
           <div class="col3">
               <blockquote>
-              I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+                <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
               </blockquote>
-              <cite><img src="resources/css/img/customer-3.jpg">Milton Chapman</cite>
+              <cite><img src="../images/random_user3.jpg">Milton Chapman</cite>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="location">
+      <h1 class="subtitle"> Where are we <br></h1>
+      <div class = "flex">
+        <div class="map"><img  class = "locationImg" src="../images/location.png"></div>
+        <div class="contact">
+          <img class="logo" src="../images/logo.png">
+          <p class="info">2702 Rutherford Rd, Concord, ON L4K 2N6 <br> Phone:(226)-748-9576
+            <br> We are Open 9:00 - 21:00 </p>
+            <a class="btn btn-full order order" href="#">Order now</a>
+
+        </div>
+        </div>
     </section>
 
+   <!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
 
+  <!-- Footer Elements -->
+  <div class="container">
 
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
 
+  </div>
+  <!-- Footer Elements -->
 
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://google.com/"> Google</a>
+  </div>
+  <!-- Copyright -->
 
+</footer>
+<!-- Footer -->
   </body>
 
-  <!-- Modal HTML -->
-<div id="myModal" class="modal fade">
+
+
+
+<!-- User Login -->
+
+<div id="myModalLogin" class="modal fade">
 	<div class="modal-dialog modal-login">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Member Login</h4>
+				<h4 class="modal-title">Login</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="/examples/actions/confirmation.php" method="post">
+				<form action="/login" method="POST">
 					<div class="form-group">
 						<i class="fa fa-user"></i>
-						<input type="text" class="form-control" placeholder="Username" required="required">
+						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
 					</div>
 					<div class="form-group">
 						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" placeholder="Password" required="required">
+						<input type="password" class="form-control" name="password" placeholder="Password" required="required">
 					</div>
 					<div class="form-group">
 						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
 					</div>
 				</form>
-
-			</div>
-			<div class="modal-footer">
-				<a href="#">Forgot Password?</a>
 			</div>
 		</div>
 	</div>
 </div>
+
+<!-- User Sign Up -->
+
+<div id="myModalRegister" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Sign Up</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+        <form action="/register" method="POST">
+          <div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" name="name" placeholder="Name" required="required">
+          </div>
+					<div class="form-group">
+						<i class="fa fa-envelope"></i>
+						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+					</div>
+          <div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" name="password" placeholder="Password" required="required">
+          </div>
+          <div class="form-group">
+						<i class="fa fa-phone"></i>
+						<input type="phone" class="form-control" name="phone" placeholder="Phone Number" required="required">
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
 
 
 
@@ -162,6 +267,9 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+</section>
+
 
 
 </body>

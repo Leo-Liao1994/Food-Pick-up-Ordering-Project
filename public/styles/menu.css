@@ -1,34 +1,87 @@
 .menu{
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../images/menu_bg_img.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.2)), url(../images/menu_bg_img.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
-}
-
-.subtitle{
-  display: flex;
-  justify-content: center;
-  font-family: "Lobster";
-}
-
-.submenu1{
-  margin-left:8%;
-}
-
-
-
-.menuitem{
-  border-right: 2px solid #a0c79d;
-
-  padding:20px;
-}
-
-
-.divide{
-  display:flex;
 
 }
 
 
+.subtitle:after {
+  display: block;
+  height: 2px;
+  background-color: #a0c79d;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
 
+
+.slogan{
+  font-style: italic;
+  text-align: center;
+  font-size: larger;
+}
+
+.menu-img{
+  width:200px;
+  margin-left:100%;
+}
+
+
+
+
+
+.btn-full:link, .btn-full:visited{
+  background-color: #233529;
+  border: 2px solid #233529;
+  color: #fff;
+  margin-left:41.5%;
+  margin-top:12.5%
+
+}
+
+
+.content_img{
+  position: relative;
+  width: 10%;
+  height: 200px;
+  float:left;
+  margin-left: 7.25%;
+ }
+
+
+
+ .content_img div{
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+ }
+
+ .content_img:hover{
+  cursor: pointer;
+ }
+
+ .content_img:hover div{
+  margin-left: 150px;
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.9;
+ }
+
+ .text1{
+
+   margin-left:120px;
+ }
+
+ .text2{
+
+  margin-left:120px;
+}
