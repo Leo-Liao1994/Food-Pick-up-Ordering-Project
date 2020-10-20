@@ -43,35 +43,53 @@ module.exports = (db) => {
         }
         return database.addUser(user);
       })
-
   }
-
 
 
   auth.post("/register", (req, res) => {
 
     const { name, email, password, phone } = req.body;
-    console.log({ name, email, password, phone });
     register(name, email, password, phone, database)
-      .then(newUser => {
-        console.log('newUser is: ', newUser);
-        if (!newUser) {
+      .then(user => {
+        if (!user) {
           res.send({ error: 'User already exists! Please login!' });
           return;
         }
-
+        req.session.userId = user.id;
+        res.send({ user: { name: user.name, email: user.email, phone: user.phone, id: user.id } });
       })
-      .catch((error) => {
-        console.log(error)
-        res.send(error.message)
-      })
+      .catch((error) => res.send(error.message));
   });
 
 
 
 
 
-  auth.post("/login");
+  const login = function(email, password) {
+    return database.findUserByEmail(email)
+      .then(user => {
+        if (bcrypt.compareSync(password, user.password)) {
+          return user;
+        }
+        return null;
+      });
+  }
+
+
+
+  auth.post("/login", (req, res) => {
+    const {email, password} = req.body;
+    login(email, password)
+      .then(user => {
+        if (!user) {
+          res.send({error: "error"});
+          return;
+        }
+        req.session.userId = user.id;
+        res.send({user: {name: user.name, email: user.email, id: user.id}});
+      })
+      .catch(error => res.send(error));
+  });
 
 
 
