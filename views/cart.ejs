@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>Cart</title>
 
     <!-- Link to css -->
     <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/login.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/location.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/menupage.css" type="text/css" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -23,17 +28,20 @@
 
   <body>
 
-    <header></header>
+    <header>
+      <nav id="navbar">
+        <img class="logo" src="../images/logo.png">
+          <ul class = "main-nav">
+            <li><a href="/" class="trigger-btn " data-toggle="modal">Main page</a></li>
+          </ul>
+      </nav>
+    </header>
+
     <div class="container">
-      <!-- <div class="row"> -->
         <div class="col-md-9">
-          <!-- <div> -->
             <div class="title">
               <h5>Items in your cart</h5>
-              <span class="pull-right">(2) items</span>
             </div>
-
-
               <div class="cart-row">
                 <div class="table-responsive">
                   <table class="table">
@@ -43,63 +51,21 @@
                           <div class="cart-product-image">image</div>
                         </td>
                         <td class="description">
-                          <h3>Mixed berry mousse</h3>
+                          <h3>Menu Item</h3>
                           <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           <div class="m-t-sm">
                             <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
                           </div>
                         </td>
-                        <!-- <td width=60>
-                          <input type="text" class="form-control" placeholder="1">
-                        </td> -->
                         <td>
-                          <h4 class="cart-price">$18.99</h4>
+                          <h4 class="cart-price">Price</h4>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-
-
-              <div class="cart-row">
-                <div class="table-responsive">
-                  <table class="table">
-                    <tbody>
-                    <tr>
-                      <td>
-                        <div class="cart-product-image">image
-                        </div>
-                      </td>
-                      <td class="description">
-                        <h3>Chocolate lava cake</h3>
-                        <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="m-t-sm">
-                          <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                        </div>
-                      </td>
-                    <!-- <td width=60>
-                      <input type="text" class="form-control" placeholder="1">
-                    </td> -->
-                    <td>
-                      <h4>$38.99</h4>
-                    </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-
-          <!-- </div> -->
         </div>
-
-
-
-      <!-- </div> -->
-
-
-
 
       <!-- Cart Summary -->
 
@@ -110,7 +76,7 @@
                   </div>
                   <div class="content">
                     <span>Total</span>
-                    <h2 class="font-bold">$57.98</h2>
+                    <h2 class="font-bold">Total price</h2>
                     <hr>
                     <div class="m-t-sm">
                       <div class="btn-group">
@@ -122,16 +88,6 @@
                 </div>
               </div>
     </div>
-
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
   </body>
 </html>

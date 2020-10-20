@@ -39,4 +39,19 @@ footer{
   height:20vh;
   border-top: 2px solid #a0c79d ;
   text-align: center;
+  margin-top:80px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.back-to-top {
+  float: right;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  color:green ;
+}
+
