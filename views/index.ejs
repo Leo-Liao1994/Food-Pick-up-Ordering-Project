@@ -55,7 +55,8 @@
     <nav class="navbar">
         <img class="logo" src="../images/logo.png">
         <ul class = "main-nav">
-          <li> <a href="#myModal" class="trigger-btn" data-toggle="modal">Login in</a> </li>
+          <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal">Login</a> </li>
+          <li> <a href="#myModalRegister" class="trigger-btn" data-toggle="modal">Sign up</a></li>
           <li> <a herf = "#">Menu</a> </li>
           <li> <a herf = "#">About us</a> </li>
           <li> <a herf = "#">Location</a> </li>
@@ -188,13 +189,13 @@
 
 
 
-  <!-- Login/Create a User -->
+  <!-- User Login -->
 
-<div id="myModal" class="modal fade">
+<div id="myModalLogin" class="modal fade">
 	<div class="modal-dialog modal-login">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Member Login</h4>
+				<h4 class="modal-title">Login</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
@@ -211,14 +212,53 @@
 						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
 					</div>
 				</form>
-
-			</div>
-			<div class="modal-footer">
-				<a href="#">Sign up</a>
 			</div>
 		</div>
 	</div>
 </div>
+
+
+  <!-- User Sign Up -->
+
+
+<div id="myModalRegister" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Sign Up</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+        <form action="/register" method="post">
+          <div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" placeholder="Name" required="required">
+          </div>
+					<div class="form-group">
+						<i class="fa fa-envelope"></i>
+						<input type="email" class="form-control" placeholder="Email" required="required">
+					</div>
+          <div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" placeholder="Password" required="required">
+          </div>
+          <div class="form-group">
+						<i class="fa fa-phone"></i>
+						<input type="password" class="form-control" placeholder="Phone Number" required="required">
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
 
 
 
