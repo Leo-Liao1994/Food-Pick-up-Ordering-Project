@@ -9,18 +9,23 @@ const express = require('express');
 const auth = express.Router();
 const database = require("../database");
 
+const app = express();
+
 //encrypted cookies
 const cookieSession = require('cookie-session');
 app.use(cookieSession({
   name: 'session',
-  keys: ['8bf38336b2fe538d6916ca845f8e5b4f', '2baccf00b3d092bb8ef46ae35f8e5be9']
+  keys: ["key1", "key2"],
 }));
+
 
 //hashed passwords
 const bcrypt = require('bcrypt');
-const salt = bcrypt.genSaltSync(10);
+const salt = bcrypt.genSaltSync(12);
 
 module.exports = (db) => {
+
+  // no GET /login and Get /register. they're drop down menues
 
   // auth.get("/register", (req, res) => {
   //   db.query(`SELECT * FROM users;`)
@@ -35,15 +40,14 @@ module.exports = (db) => {
   //     });
   // });
 
-
-  auth.get("/login");
+  // auth.get("/login");
 
 
 
   const register = (name, email, password, phone) => {
     return database.findUserByEmail(email)
       .then(user => {
-        console.log("findusrbyem returned", user)
+        console.log("findUserByEmail returned", user)
         if (user) {
           return null;  //returns to line 48
         }
@@ -65,11 +69,11 @@ module.exports = (db) => {
   auth.post("/register", (req, res) => {
 
     // const { name, email, password, phone } = { "name": "tt", "email": "tt", "password": "tt", "phone": "tt" };
-    const {name, email, password, phone} = req.body;
+    const { name, email, password, phone } = req.body;
     console.log({ name, email, password, phone });
     register(name, email, password, phone, database)
       .then(newUser => {
-        console.log('newUser: ', newUser);
+        console.log('newUser is: ', newUser);
         if (!newUser) {
           // console.log({error: 'User already exists! Please login!'});
           res.send({ error: 'User already exists! Please login!' });
@@ -86,35 +90,18 @@ module.exports = (db) => {
         console.log(error)
         res.send(error.message)
       })
-  })
+  });
 
 
-  //   const userId = generateRandomString();   //PK from users database
-  //   const email = req.body.email;
-  //   const password = req.body.password;
-  //   password = bcrypt.hashSync(password, 10)
+  // database.addUser({ name, email, password, phone })
+  //   .then(() => {
+  //     res.redirect
+  //   });
 
-  //   // or have 56 and 57 as :  const password = bcrypt.hashSync(req.body.password, 10)
 
-  //   if (email === '' || password === '') {
-  //     res.status(400).send("Please provide a valid email and/or password.");
-  //   } else if (findUserByEmail(users, email)) {   //come back to it later
-  //     res.status(400).send("User already exists!");   //come back to it later
-  //   } else {
-  //     // users[userId] = {
-  //     //   id: userId,
-  //     //   email,
-  //     //
 
-  //     database.addUser({ email, password })
-  //       .then(() => {
-  //         res.redirect
-  //       })
-  //       ;
-
-  //   };
   //   req.session.user_id = userId;
-  //   res.redirect("/urls");
+  //   res.redirect("/  ");
   // }
   // });
 
@@ -122,12 +109,10 @@ module.exports = (db) => {
 
 
 
-// auth.post("/login");
+  auth.post("/login");
 
-// auth.post("/logout");
+  auth.post("/logout");
 
-
-return auth;
-
+  return auth;
 
 };
