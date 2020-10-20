@@ -5,7 +5,9 @@
 
 }
 
-
+.subtitle{
+  margin-top:80px;
+}
 .subtitle:after {
   display: block;
   height: 2px;

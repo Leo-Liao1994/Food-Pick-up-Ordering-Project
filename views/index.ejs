@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Google Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
@@ -47,24 +48,27 @@
   <!-- Javascript -->
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/btn.js"></script>
+
 </head>
 
 <body>
+
   <section class ="main">
   <header>
-    <nav class="navbar">
+    <nav id="navbar">
         <img class="logo" src="../images/logo.png">
         <ul class = "main-nav">
           <li> <a href="#myModal" class="trigger-btn" data-toggle="modal">Login in</a> </li>
-          <li> <a herf = "#">Menu</a> </li>
-          <li> <a herf = "#">About us</a> </li>
-          <li> <a herf = "#">Location</a> </li>
+          <li> <a href = "#menu" class="trigger-btn">Menu</a> </li>
+          <li> <a href = "#aboutUs" class="trigger-btn">About us</a> </li>
+          <li> <a href = "#location" class="trigger-btn">Location</a> </li>
         </ul>
       </nav>
       <h1 class= "headertext">Sweet dreams <br>are made of these</h1>
     </header>
 
-    <section class="menu">
+    <section id="menu">
       <h1 class="subtitle"> Our Signature dessert <br></h1>
       <p class = "slogan">We beat it, you eat it! </p>
         <div class="content_img">
@@ -85,11 +89,11 @@
 
       </div>
 
-      <a class="btn btn-full" href="#">Check out the full menu</a>
+      <a class="btn btn-full" href="/menu">Check out the full menu</a>
     </section>
 
 
-    <section class="aboutUs">
+    <section id="aboutUs">
       <h1 class="subtitle"> About Us <br></h1>
       <p class = "description">&nbsp &nbsp Delights is one of the few fine dessert place in the Greater Toronto Area.
        We are located in Vaughan and known as “The city above Toronto”.
@@ -122,7 +126,7 @@
         </div>
       </div>
     </section>
-    <section class="location">
+    <section id="location">
       <h1 class="subtitle"> Where are we <br></h1>
       <div class = "flex">
         <div class="map"><img  class = "locationImg" src="../images/location.png"></div>
@@ -135,6 +139,7 @@
         </div>
         </div>
     </section>
+    <a id="back-to-top" href="#navbar" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
    <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
@@ -183,6 +188,8 @@
 
 </footer>
 <!-- Footer -->
+
+
   </body>
 
 
@@ -235,5 +242,4 @@
 
 
 </body>
-
 </html>
