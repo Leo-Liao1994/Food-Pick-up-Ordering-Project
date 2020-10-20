@@ -1,15 +1,18 @@
-<section class ="main">
+<section class="main">
   <header>
     <nav id="navbar">
-        <img class="logo" src="../images/logo.png">
-        <ul class = "main-nav">
-          <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal">Login in</a> </li>
-          <li> <a href="#myModalRegister" class="trigger-btn" data-toggle="modal">Sign up</a></li>
-          <li> <a href = "#menu" class="trigger-btn">Menu</a> </li>
-          <li> <a href = "#aboutUs" class="trigger-btn">About us</a> </li>
-          <li> <a href = "#location" class="trigger-btn">Location</a> </li>
-        </ul>
-      </nav>
-      <h1 class= "headertext">Sweet dreams <br>are made of these</h1>
-    </header>
-
+      <img class="logo" src="../images/logo.png">
+      <ul class="main-nav">
+        <% if (user) { %>
+        <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal">Log in</a> </li>
+        <li> <a href="#myModalRegister" class="trigger-btn" data-toggle="modal">Sign up</a></li>
+        <% } else { %>
+        <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal">Log out</a> </li>
+        <% } %>
+        <li> <a href="#menu" class="trigger-btn">Menu</a> </li>
+        <li> <a href="#aboutUs" class="trigger-btn">About us</a> </li>
+        <li> <a href="#location" class="trigger-btn">Location</a> </li>
+      </ul>
+    </nav>
+    <h1 class="headertext">Sweet dreams <br>are made of these</h1>
+  </header>
