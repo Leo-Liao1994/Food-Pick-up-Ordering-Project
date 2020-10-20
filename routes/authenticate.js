@@ -9,12 +9,12 @@ const express = require('express');
 const auth = express.Router();
 const database = require("../database");
 
-// encrypted cookies
-// const cookieSession = require('cookie-session');
-// app.use(cookieSession({
-//   name: 'session',
-//   keys: ['8bf38336b2fe538d6916ca845f8e5b4f', '2baccf00b3d092bb8ef46ae35f8e5be9']
-// }));
+//encrypted cookies
+const cookieSession = require('cookie-session');
+app.use(cookieSession({
+  name: 'session',
+  keys: ['8bf38336b2fe538d6916ca845f8e5b4f', '2baccf00b3d092bb8ef46ae35f8e5be9']
+}));
 
 //hashed passwords
 const bcrypt = require('bcrypt');
