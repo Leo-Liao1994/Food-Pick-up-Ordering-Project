@@ -56,6 +56,8 @@ app.get("/", (req, res) => {
 
 app.get('/menu', (req, res) => {
   res.render('menu');
+app.get("/cart", (req, res) => {
+  res.render("cart");
 });
 
 app.listen(PORT, () => {
