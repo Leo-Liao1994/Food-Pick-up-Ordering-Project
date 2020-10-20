@@ -23,3 +23,22 @@ module.exports = (db) => {
 
   return auth;
 };
+
+
+
+
+
+// auth.post("/register", (req, res) => {
+//   if(req.body.email === "" || req.body.password === "" || req.body.name === "" ||req.body.phone === ""){
+//     res.sendStatus('404')
+//   }
+// for (let i in users) {
+//   if(req.body.email === users[i].email){
+//     res.sendStatus('404')
+//     }
+//   }
+
+// users[randomID] = newUser;
+// req.session.userID = randomID;
+// res.redirect("/")
+// });
