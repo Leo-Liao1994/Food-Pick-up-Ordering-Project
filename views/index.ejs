@@ -18,26 +18,17 @@
 
 
 
-
-
-<!-- ////////////////////////////////////////////////////////////////////////// -->
-
-
   <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<!-- W3school-->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-
-<!-- ////////////////////////////////////////////////////////////////////////// -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- W3school-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -54,28 +45,31 @@
 
 <body>
 
-  <section class ="main">
+  <section class="main">
 
-    <header> <%-include('partials/_header') %></header>
+    <header>
+      <%-include('partials/_header') %>
+      <%-include('partials/login') %>
+    </header>
 
     <section id="menu">
       <h1 class="subtitle"> Our Signature dessert <br></h1>
-      <p class = "slogan">We beat it, you eat it! </p>
-        <div class="content_img">
-          <img  class = "menu-img first"src="../images/Matcha .jpeg">
-          <div class="text1">Image 1 Text</div>
-         </div>
-         <div class="content_img">
-          <img  class = "menu-img second"src="../images/Cherry cheesecake slices.jpeg">
-          <div class="text">Image 2 Text</div>
-         </div>
-         <div class="content_img">
-          <img  class = "menu-img third"src="../images/Creme-Brulee.jpg">
-          <div>Image 3 Text</div>
-         </div>
-         <div class="content_img">
-          <img  class = "menu-img fouth"src="../images/Rosewater Panna Cotta _ Queen Fine Foods.jpeg">
-          <div>Image 4 Text</div>
+      <p class="slogan">We beat it, you eat it! </p>
+      <div class="content_img">
+        <img class="menu-img first" src="../images/Matcha .jpeg">
+        <div class="text1">Image 1 Text</div>
+      </div>
+      <div class="content_img">
+        <img class="menu-img second" src="../images/Cherry cheesecake slices.jpeg">
+        <div class="text">Image 2 Text</div>
+      </div>
+      <div class="content_img">
+        <img class="menu-img third" src="../images/Creme-Brulee.jpg">
+        <div>Image 3 Text</div>
+      </div>
+      <div class="content_img">
+        <img class="menu-img fouth" src="../images/Rosewater Panna Cotta _ Queen Fine Foods.jpeg">
+        <div>Image 4 Text</div>
 
       </div>
 
@@ -85,168 +79,144 @@
 
     <section id="aboutUs">
       <h1 class="subtitle"> About Us <br></h1>
-      <p class = "description">&nbsp &nbsp Delights is one of the few fine dessert place in the Greater Toronto Area.
-       We are located in Vaughan and known as “The city above Toronto”.
+      <p class="description">&nbsp &nbsp Delights is one of the few fine dessert place in the Greater Toronto Area.
+        We are located in Vaughan and known as “The city above Toronto”.
         Our team have taken great pride in serving our community for the past 70 years </p>
 
-        <div class="reviews">
-        <div class = "row">
-          <h2 class ="customerReview">Hear what our customer says</h2>
-      </div>
-      <div class ="cols">
+      <div class="reviews">
+        <div class="row">
+          <h2 class="customerReview">Hear what our customer says</h2>
+        </div>
+        <div class="cols">
           <div class="col1">
-              <blockquote>
-                <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
-              </blockquote>
-              <cite><img src="../images/random_user1.jpg">Alberto Duncan</cite>
+            <blockquote>
+              <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food
+                delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
+            </blockquote>
+            <cite><img src="../images/random_user1.jpg">Alberto Duncan</cite>
           </div>
           <div class="col2">
-              <blockquote>
-              <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
-              </blockquote>
-              <cite><img src="../images/random_user2.jpg">Joana Silva</cite>
+            <blockquote>
+              <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food
+                delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
+            </blockquote>
+            <cite><img src="../images/random_user2.jpg">Joana Silva</cite>
           </div>
 
           <div class="col3">
-              <blockquote>
-                <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
-              </blockquote>
-              <cite><img src="../images/random_user3.jpg">Milton Chapman</cite>
+            <blockquote>
+              <i>"Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food
+                delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</i>
+            </blockquote>
+            <cite><img src="../images/random_user3.jpg">Milton Chapman</cite>
           </div>
         </div>
       </div>
     </section>
     <section id="location">
       <h1 class="subtitle"> Where are we <br></h1>
-      <div class = "flex">
-        <div class="map"><img  class = "locationImg" src="../images/location.png"></div>
+      <div class="flex">
+        <div class="map"><img class="locationImg" src="../images/location.png"></div>
         <div class="contact">
           <img class="logo" src="../images/logo.png">
           <p class="info">2702 Rutherford Rd, Concord, ON L4K 2N6 <br> Phone:(226)-748-9576
             <br> We are Open 9:00 - 21:00 </p>
-            <a class="btn btn-full order order" href="#">Order now</a>
+          <a class="btn btn-full order order" href="#">Order now</a>
 
         </div>
-        </div>
+      </div>
     </section>
-    <a id="back-to-top" href="#navbar" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <a id="back-to-top" href="#navbar" class="btn btn-light btn-lg back-to-top" role="button"><i
+        class="fas fa-chevron-up"></i></a>
 
-   <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
 
-  <!-- Footer Elements -->
-  <div class="container">
+      <!-- Footer Elements -->
+      <div class="container">
 
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fab fa-google-plus-g"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+              <i class="fab fa-google-plus-g"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+              <i class="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
 
-  </div>
-  <!-- Footer Elements -->
+      </div>
+      <!-- Footer Elements -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://google.com/"> Google</a>
-  </div>
-  <!-- Copyright -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://google.com/"> Google</a>
+      </div>
+      <!-- Copyright -->
 
-</footer>
-<!-- Footer -->
-
-
-  </body>
+    </footer>
+    <!-- Footer -->
 
 
+</body>
 
 
-<!-- User Login -->
 
-<div id="myModalLogin" class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title">Login</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			</div>
-			<div class="modal-body">
-				<form action="/login" method="POST">
-					<div class="form-group">
-						<i class="fa fa-user"></i>
-						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-					</div>
-					<div class="form-group">
-						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" name="password" placeholder="Password" required="required">
-					</div>
-					<div class="form-group">
-						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
 
 <!-- User Sign Up -->
 
 <div id="myModalRegister" class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title">Sign Up</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			</div>
-			<div class="modal-body">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Sign Up</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
         <form action="/register" method="POST">
           <div class="form-group">
-						<i class="fa fa-user"></i>
-						<input type="text" class="form-control" name="name" placeholder="Name" required="required">
-          </div>
-					<div class="form-group">
-						<i class="fa fa-envelope"></i>
-						<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-					</div>
-          <div class="form-group">
-						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            <i class="fa fa-user"></i>
+            <input type="text" class="form-control" name="name" placeholder="Name" required="required">
           </div>
           <div class="form-group">
-						<i class="fa fa-phone"></i>
-						<input type="phone" class="form-control" name="phone" placeholder="Phone Number" required="required">
-					</div>
-					<div class="form-group">
-						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+            <i class="fa fa-envelope"></i>
+            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+          </div>
+          <div class="form-group">
+            <i class="fa fa-lock"></i>
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+          </div>
+          <div class="form-group">
+            <i class="fa fa-phone"></i>
+            <input type="phone" class="form-control" name="phone" placeholder="Phone Number" required="required">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -255,12 +225,13 @@
 
 
 
-  <!-- JQuery -->
+<!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
@@ -269,4 +240,5 @@
 
 
 </body>
+
 </html>
