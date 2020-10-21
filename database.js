@@ -47,3 +47,15 @@ const getMenuItems =  function() {
 };
 exports.getMenuItems = getMenuItems;
 
+
+// add items to cart
+const addItemsToCart = (name) => {
+  const addItemsToCartQuery = `
+  INSERT INTO orders (name)
+  VALUES ($1, $2, $3, $4)
+  RETURNING *
+  `;
+  return db.query(addItemsToCartQuery)
+    .then(response => response.rows[0])
+    .catch(error => error.message);
+}
