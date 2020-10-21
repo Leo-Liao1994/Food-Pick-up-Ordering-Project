@@ -36,6 +36,14 @@ const findUserByEmail = (email) => {
 exports.findUserByEmail = findUserByEmail;
 
 
-
-
+// get menu items from database
+const getMenuItems =  function() {
+  const menuQuery = `
+    SELECT id, name, description, picture, price
+    FROM menu_items;
+    `;
+  return db.query(menuQuery)
+    .then(response => response.rows);
+};
+exports.getMenuItems = getMenuItems;
 
