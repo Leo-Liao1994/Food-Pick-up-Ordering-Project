@@ -10,5 +10,5 @@ VALUES ('Matcha Coconut Panna Cotta', 'This Coconut Matcha Panna Cotta is based 
 ('Cherry Cake', 'The secret in this recipe is undiluted evaporated milk for added richness.', '../images/cherrycake.jpg', 1500, 1);
 
 
-INSERT INTO restaurants (name, phone)
-VALUES ('Delights', 5555555555);
+-- INSERT INTO restaurants (name, phone)
+-- VALUES ('Delights', 5555555555);

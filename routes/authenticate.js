@@ -40,7 +40,7 @@ module.exports = (db) => {
 
   auth.post("/register", (req, res) => {
 
-    const { name, email, password, phone } = req.body;
+    const { name, email , password, phone } = req.body;
     register(name, email, password, phone, database)
       .then(user => {
         if (!user) {
@@ -75,7 +75,7 @@ module.exports = (db) => {
     login(email, password)
       .then(user => {
         if (!user) {
-          res.send({error: "error"});
+          res.redirect({error: "error"});
           return;
         }
         req.session.userId = user.id;
@@ -96,3 +96,22 @@ module.exports = (db) => {
   return auth;
 
 };
+
+
+
+
+
+// auth.post("/register", (req, res) => {
+//   if(req.body.email === "" || req.body.password === "" || req.body.name === "" ||req.body.phone === ""){
+//     res.sendStatus('404')
+//   }
+// for (let i in users) {
+//   if(req.body.email === users[i].email){
+//     res.sendStatus('404')
+//     }
+//   }
+
+// users[randomID] = newUser;
+// req.session.userID = randomID;
+// res.redirect("/")
+// });
