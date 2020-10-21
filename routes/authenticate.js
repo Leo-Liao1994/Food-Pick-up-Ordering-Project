@@ -44,7 +44,7 @@ module.exports = (db) => {
     register(name, email, password, phone, database)
       .then(user => {
         if (!user) {
-          res.send({ error: 'User already exists! Please login!' });
+          res.redirect("/error_message");
           return;
         }
         console.log("request session is:", req.session);
