@@ -40,7 +40,7 @@ module.exports = (db) => {
 
   auth.post("/register", (req, res) => {
 
-    const { name, email, password, phone } = req.body;
+    const { name, email , password, phone } = req.body;
     register(name, email, password, phone, database)
       .then(user => {
         if (!user) {
