@@ -75,7 +75,7 @@ module.exports = (db) => {
     login(email, password)
       .then(user => {
         if (!user) {
-          res.send({error: "error"});
+          res.redirect({error: "error"});
           return;
         }
         req.session.userId = user.id;
