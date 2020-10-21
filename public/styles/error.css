@@ -1,0 +1,14 @@
+header {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../images/Smash-Cake_Bakers-Royale1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.1)), url(../images/Smash-Cake_Bakers-Royale1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-bottom: 80px;
+}
+
+
+.err_message{
+  text-align: center;
+  margin-top: 50%;
+}
