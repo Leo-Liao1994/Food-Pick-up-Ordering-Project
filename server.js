@@ -2,13 +2,13 @@
 require('dotenv').config();
 
 // Web server config
-const PORT       = process.env.PORT || 8080;
-const ENV        = process.env.ENV || "development";
-const express    = require("express");
+const PORT = process.env.PORT || 8080;
+const ENV = process.env.ENV || "development";
+const express = require("express");
 const bodyParser = require("body-parser");
-const sass       = require("node-sass-middleware");
-const app        = express();
-const morgan     = require('morgan');
+const sass = require("node-sass-middleware");
+const app = express();
+const morgan = require('morgan');
 const cookieSession = require('cookie-session');
 
 
@@ -46,7 +46,7 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 const ordersRoutes = require("./routes/orders");
 const authRoutes = require("./routes/authenticate");
-
+const database = require("./database");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -61,7 +61,7 @@ app.use("/", authRoutes(db));
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  res.render("index", {user: "Alice"});
+  res.render("index", { user: "Alice" });
 });
 
 app.get('/menu', (req, res) => {
@@ -70,7 +70,14 @@ app.get('/menu', (req, res) => {
 
 
 app.get("/cart", (req, res) => {
-  res.render("cart");
+
+  database.getMenuItems().then((menuItems) => {
+    console.log("menuItem is:", menuItems);
+    const templateVars = { menuItems };
+    res.render("cart", templateVars);
+  })
+
+
 });
 
 app.get("/error_message", (req, res) => {

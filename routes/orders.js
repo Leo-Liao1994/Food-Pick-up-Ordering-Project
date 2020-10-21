@@ -7,8 +7,15 @@
 
 const express = require('express');
 const orders = express.Router();
+const database = require("../database");
 
 module.exports = (db) => {
+
+
+
+
+
+
 
   orders.get("/", (req, res) => {
     db.query(`SELECT * FROM users;`)
