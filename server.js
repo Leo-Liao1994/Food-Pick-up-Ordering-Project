@@ -73,6 +73,10 @@ app.get("/cart", (req, res) => {
   res.render("cart");
 });
 
+app.get("/error_message", (req, res) => {
+  res.render("error_message");
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
