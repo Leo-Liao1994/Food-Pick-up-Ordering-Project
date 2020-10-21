@@ -5,18 +5,10 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
-const express = require('express');
+const express    = require("express");
+
 const auth = express.Router();
 const database = require("../database");
-
-const app = express();
-
-//encrypted cookies
-const cookieSession = require('cookie-session');
-app.use(cookieSession({
-  name: 'session',
-  keys: ["key1", "key2"],
-}));
 
 
 //hashed passwords
@@ -43,33 +35,63 @@ module.exports = (db) => {
         }
         return database.addUser(user);
       })
-
   }
-
 
 
   auth.post("/register", (req, res) => {
 
     const { name, email, password, phone } = req.body;
-    console.log({ name, email, password, phone });
     register(name, email, password, phone, database)
-      .then(newUser => {
-        console.log('newUser is: ', newUser);
-        if (!newUser) {
+      .then(user => {
+        if (!user) {
           res.send({ error: 'User already exists! Please login!' });
           return;
         }
-
+        console.log("request session is:", req.session);
+        req.session.userId = user.id;
+        res.redirect("/");
       })
-      .catch((error) => {
-        console.log(error)
-        res.send(error.message)
-      })
+      .catch((error) => res.send(error.message));
   });
 
-  auth.post("/login");
 
-  auth.post("/logout");
+
+
+
+  const login = function(email, password) {
+    return database.findUserByEmail(email)
+      .then(user => {
+        if (bcrypt.compareSync(password, user.password)) {
+          return user;
+        }
+        return null;
+      });
+  }
+
+
+
+  auth.post("/login", (req, res) => {
+    const {email, password} = req.body;
+    login(email, password)
+      .then(user => {
+        if (!user) {
+          res.send({error: "error"});
+          return;
+        }
+        req.session.userId = user.id;
+        res.redirect("/");
+      })
+      .catch(error => res.send(error));
+  });
+
+
+
+
+  auth.post("/logout", (req, res) => {
+    req.session.userId = null;
+    res.redirect("/");
+  });
+
 
   return auth;
 
