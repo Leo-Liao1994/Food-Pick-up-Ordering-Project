@@ -1,101 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <title>Cart</title>
+<head>
+  <title>Cart</title>
 
-    <!-- Link to css -->
-    <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/login.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/location.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/menupage.css" type="text/css" />
+  <!-- Link to css -->
+  <link rel="stylesheet" href="/styles/cart.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/login.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/location.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/menupage.css" type="text/css" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <!-- Montserrat Font Regular 400, Bold 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Montserrat Font Regular 400, Bold 700 -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-  <body>
+<body>
 
-    <header>
-      <nav id="navbar">
-        <img class="logo" src="../images/logo.png">
-          <ul class = "main-nav">
-            <li><a href="/" class="trigger-btn " data-toggle="modal">Main page</a></li>
-          </ul>
-      </nav>
-    </header>
+  <header>
+    <nav id="navbar">
+      <img class="logo" src="../images/logo.png">
+      <ul class="main-nav">
+        <li><a href="/" class="trigger-btn " data-toggle="modal">Main page</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-        <div class="col-md-9">
-            <div class="title">
-              <h5>MENU ITEMS</h5>
-            </div>
-            <% for (let item of menuItems) { %>
-              <div class="cart-row">
-                <div class="table-responsive">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="cart-product-image">image</div>
-                        </td>
-                        <td class="description">
-                          <h3>Menu Item</h3>
-                          <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                          <div class="m-t-sm">
-                            <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
-                          </div>
-                        </td>
-                        <td>
-                          <h4 class="cart-price">Price</h4>
-                        </td>
-                        <td class="addButton">
-                          <form method="GET" action="">
-                            <button type="submit" class="btn ">ADD</button>
-                          </form>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <% } %>
+  <div class="container">
+    <div class="col-md-9">
+      <div class="title">
+        <h5>MENU ITEMS</h5>
+      </div>
+      <% for (let item of menuItems) { %>
+      <div class="cart-row">
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cart-product-image">
+                    <% console.log(item.picture) %>
+                    <img src="<%= item.picture %>">
+                  </div>
+                </td>
+                <td class="description">
+                  <h3>
+                    <%= item.name %>
+                  </h3>
+                  <p class="small">
+                    <%= item.description %>
+                  </p>
+                  <div class="m-t-sm">
+                    <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
+                  </div>
+                </td>
+                <td>
+                  <h4 class="cart-price">
+                    $<%= (item.price / 100).toFixed(2) %>
+                  </h4>
+                </td>
+                <td class="addButton">
+                  <form method="GET" action="">
+                    <button type="submit" class="btn ">ADD</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-      <!-- Cart Summary -->
-
-              <div class="col-md-3">
-                <div>
-                  <div class="title">
-                    <h5>Cart Summary</h5>
-                  </div>
-                  <div class="content">
-                    <span>Total</span>
-                    <h2 class="font-bold">Total price</h2>
-                    <hr>
-                    <div class="m-t-sm">
-                      <div class="btn-group">
-                        <a href="#" class="btn btn-primary btn-sm">Checkout</a>
-                        <a href="#" class="btn btn-white btn-sm">Cancel</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </div>
+      <% } %>
     </div>
 
+    <!-- Cart Summary -->
 
-  </body>
+    <div class="col-md-3">
+      <div>
+        <div class="title">
+          <h5>Cart Summary</h5>
+        </div>
+        <div class="content">
+          <span>Total</span>
+          <h2 class="font-bold">Total price</h2>
+          <hr>
+          <div class="m-t-sm">
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary btn-sm">Checkout</a>
+              <a href="#" class="btn btn-white btn-sm">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
 </html>
