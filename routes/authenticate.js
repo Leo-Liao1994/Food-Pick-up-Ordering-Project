@@ -5,6 +5,8 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
+const express    = require("express");
+
 const auth = express.Router();
 const database = require("../database");
 
@@ -47,7 +49,7 @@ module.exports = (db) => {
         }
         console.log("request session is:", req.session);
         req.session.userId = user.id;
-        res.send({ user: { name: user.name, email: user.email, phone: user.phone, id: user.id } });
+        res.redirect("/");
       })
       .catch((error) => res.send(error.message));
   });
@@ -77,7 +79,7 @@ module.exports = (db) => {
           return;
         }
         req.session.userId = user.id;
-        res.send({user: {name: user.name, email: user.email, id: user.id}});
+        res.redirect("/");
       })
       .catch(error => res.send(error));
   });
@@ -87,7 +89,7 @@ module.exports = (db) => {
 
   auth.post("/logout", (req, res) => {
     req.session.userId = null;
-    res.send({});
+    res.redirect("/");
   });
 
 
