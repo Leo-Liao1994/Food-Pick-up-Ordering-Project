@@ -78,8 +78,6 @@ module.exports = (db) => {
   });
 
 
-
-
   auth.post("/logout", (req, res) => {
     req.session.userId = null;
     res.redirect("/");

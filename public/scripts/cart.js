@@ -20,13 +20,8 @@ $("#checkout-btn").on("click", (event) => {
   }).then(() => {
     console.log("order posted");
 
-  });
+     });
 
-
-
-
-})
-
-
+  })
 
 });
