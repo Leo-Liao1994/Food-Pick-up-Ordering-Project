@@ -77,6 +77,25 @@ exports.addItemToCart = addItemToCart;
 
 
 
+// add orders
+const addOrders = () => {
+
+const addOrdersQuery = `
+INSERT INTO orders (menu_item.id, quantity)
+VALUES ($1, $2)
+RETURNING *
+`;
+
+
+}
+exports.addOrders = addOrders;
+
+
+
+
+
+
+
 // orders total
 const ordersTotal = () => {
 

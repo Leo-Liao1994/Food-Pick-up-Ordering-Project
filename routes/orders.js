@@ -8,22 +8,13 @@
 const express = require('express');
 const orders = express.Router();
 const database = require("../database");
+const authRoutes = require("../routes/authenticate");
+
+
 
 module.exports = (db) => {
 
 
-  orders.get("/", (req, res) => {
-    db.query(`SELECT * FROM users;`)
-      .then(data => {
-        const users = data.rows;
-        res.json({ users });
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
-  });
 
   orders.post("/", (req,res) =>{
     console.log(req.body)
@@ -37,4 +28,8 @@ module.exports = (db) => {
   orders.delete("/:order_id")
 
   return orders;
+
 };
+
+
+

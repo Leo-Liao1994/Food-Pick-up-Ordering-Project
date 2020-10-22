@@ -58,14 +58,13 @@ app.use("/", authRoutes(db));
 
 
 // Home page
-// Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
   console.log("hello");
   console.log(req.session)
-  if (req.session.userId){
-    database.findUserById(req.session.userId).then ((user) => {
+  if (req.session.userId) {
+    database.findUserById(req.session.userId).then((user) => {
       req.user = user
       next()
     });
@@ -78,7 +77,7 @@ app.use((req, res, next) =>{
 app.get("/", (req, res) => {
   //  const templateVars = { user };
 
-  res.render("index", { user: req.user});
+  res.render("index", { user: req.user });
 });
 
 
@@ -89,15 +88,22 @@ app.get('/menu', (req, res) => {
 
 app.get("/cart", (req, res) => {
   database.getMenuItems().then((menuItems) => {
-    console.log("menuItem is:", menuItems);
+    // console.log("menuItem is:", menuItems);
     const templateVars = { menuItems };
     res.render("cart", templateVars);
   })
 });
 
+
 app.get('/confirmation', (req, res) => {
+  const items = {
+    2: 2,
+
+  }
   res.render('confirmation');
 });
+
+
 
 app.get("/error_message", (req, res) => {
   res.render("error_message");

@@ -73,7 +73,7 @@
                   </h4>
                 </td>
                 <td class="addButton">
-                    <button type="submit" class="btn add-item-btn" data-item-id=<%= item.id %>>ADD</button>
+                    <button type="submit" class="btn add-item-btn"  data-item-price="<%= item.price%>" data-item-id=<%= item.id %>>ADD</button>
                 </td>
               </tr>
             </tbody>
@@ -92,11 +92,13 @@
         </div>
         <div class="content">
           <span>Total</span>
-          <h2 class="font-bold">$Total price</h2>
+          <h2 class="font-bold total-price">$</h2>
           <hr>
           <div class="m-t-sm">
             <div class="btn-group">
-              <a href="/confirmation" class="btn btn-primary btn-sm" id="checkout-btn">Checkout</a>
+              <form action="/confirmation" method="GET" class= "d-inline">
+                <button class="btn btn-primary btn-sm" href="/confirmation">Checkout</button>
+              </form>
               <a href="#" class="btn btn-white btn-sm">Cancel</a>
             </div>
           </div>
