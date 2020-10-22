@@ -60,11 +60,27 @@ app.use("/", authRoutes(db));
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
-app.get("/", (req, res) => {
-  // const templateVars = { user };
 
-  res.render("index", { user: "Alice" });
+app.use((req, res, next) =>{
+  console.log("hello");
+  console.log(req.session)
+  if (req.session.userId){
+    database.findUserById(req.session.userId).then ((user) => {
+      req.user = user
+      next()
+    });
+  } else {
+    req.user = null;
+    next()
+  }
+})
+
+app.get("/", (req, res) => {
+  //  const templateVars = { user };
+
+  res.render("index", { user: req.user});
 });
+
 
 app.get('/menu', (req, res) => {
   res.render('menu');

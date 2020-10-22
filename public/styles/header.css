@@ -68,3 +68,13 @@ float: right;
   nav.navbar {
     box-shadow: none;
   }
+
+
+.logout-btn{
+  background: none;
+  padding: 0px;
+  cursor: pointer;
+  border: 0;
+  margin-right: 40px;
+  font-size: 20px;
+}

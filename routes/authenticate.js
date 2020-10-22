@@ -82,11 +82,7 @@ module.exports = (db) => {
     req.session.userId = null;
     res.redirect("/");
   });
-
-
-
   return auth;
-
 };
 
 

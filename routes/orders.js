@@ -25,7 +25,10 @@ module.exports = (db) => {
       });
   });
 
-  orders.post("/")
+  orders.post("/", (req,res) =>{
+    console.log(req.body)
+    res.send('ok')
+  })
 
   orders.get("/:order_id")
 
