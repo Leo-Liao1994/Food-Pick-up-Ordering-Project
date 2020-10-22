@@ -35,7 +35,7 @@ $(document).ready(function() {
     }
     // items;
     console.log(items);
-    caculateDisplayTotal(items)
+    caculateDisplayTotal(items)   //!!
 
   })
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 $("#checkout-btn").on("click", (event) => {
   console.log("second!");
-  event.preventDefault();
+  // event.preventDefault();
   $.ajax({
     method: "POST",
     url: "/orders",
