@@ -86,3 +86,28 @@ body{
   height: 1px;
   width: 1px;
 }
+
+.item-imgs{
+  display: block;
+  height: 90px;
+  width: 70px;
+}
+
+.small{
+  margin-left:50px;
+}
+
+.m-t-sm{
+  margin-left:50px;
+
+}
+
+
+h3{
+  margin-left:50px;
+}
+
+.btn-group{
+  display: block;
+}
+
