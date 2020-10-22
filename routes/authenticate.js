@@ -40,7 +40,7 @@ module.exports = (db) => {
 
   auth.post("/register", (req, res) => {
 
-    const { name, email , password, phone } = req.body;
+    const { name, email, password, phone } = req.body;
     register(name, email, password, phone, database)
       .then(user => {
         if (!user) {
@@ -65,7 +65,7 @@ module.exports = (db) => {
 
 
   auth.post("/login", (req, res) => {
-    const {email, password} = req.body;
+    const { email, password } = req.body;
     login(email, password)
       .then(user => {
         if (!user) {
@@ -84,6 +84,7 @@ module.exports = (db) => {
     req.session.userId = null;
     res.redirect("/");
   });
+
 
 
   return auth;
