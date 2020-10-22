@@ -72,14 +72,15 @@ app.get('/menu', (req, res) => {
 
 
 app.get("/cart", (req, res) => {
-
   database.getMenuItems().then((menuItems) => {
     console.log("menuItem is:", menuItems);
     const templateVars = { menuItems };
     res.render("cart", templateVars);
   })
+});
 
-
+app.get('/confirmation', (req, res) => {
+  res.render('confirmation');
 });
 
 app.get("/error_message", (req, res) => {
