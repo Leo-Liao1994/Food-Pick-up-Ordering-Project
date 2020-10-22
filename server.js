@@ -86,6 +86,10 @@ app.get("/error_message", (req, res) => {
   res.render("error_message");
 });
 
+app.get("/error_message2", (req, res) => {
+  res.render("error_message2");
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });

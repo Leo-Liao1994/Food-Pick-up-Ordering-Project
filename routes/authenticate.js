@@ -47,16 +47,11 @@ module.exports = (db) => {
           res.redirect("/error_message");
           return;
         }
-        console.log("request session is:", req.session);
         req.session.userId = user.id;
         res.redirect("/");
       })
       .catch((error) => res.send(error.message));
   });
-
-
-
-
 
   const login = function(email, password) {
     return database.findUserByEmail(email)
@@ -69,19 +64,17 @@ module.exports = (db) => {
   }
 
 
-
   auth.post("/login", (req, res) => {
     const {email, password} = req.body;
     login(email, password)
       .then(user => {
         if (!user) {
-          res.redirect({error: "error"});
           return;
         }
         req.session.userId = user.id;
         res.redirect("/");
       })
-      .catch(error => res.send(error));
+      .catch(error => res.redirect("/error_message2"));
   });
 
 
@@ -101,17 +94,3 @@ module.exports = (db) => {
 
 
 
-// auth.post("/register", (req, res) => {
-//   if(req.body.email === "" || req.body.password === "" || req.body.name === "" ||req.body.phone === ""){
-//     res.sendStatus('404')
-//   }
-// for (let i in users) {
-//   if(req.body.email === users[i].email){
-//     res.sendStatus('404')
-//     }
-//   }
-
-// users[randomID] = newUser;
-// req.session.userID = randomID;
-// res.redirect("/")
-// });
