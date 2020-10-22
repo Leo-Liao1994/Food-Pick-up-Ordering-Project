@@ -5,13 +5,13 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
-const express    = require("express");
+const express = require("express");
 
 const auth = express.Router();
 const database = require("../database");
 
 
-//hashed passwords
+// hashed passwords
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSaltSync(12);
 
