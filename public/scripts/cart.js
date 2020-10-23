@@ -41,7 +41,6 @@ $(document).ready(function () {
 
 
 
-
   // const remove = (items) => {
   //   let sum = 0;
   //   for (let itemId in items) {

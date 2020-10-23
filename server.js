@@ -112,11 +112,14 @@ app.get("/cart", (req, res) => {
 
 
 app.get('/confirmation', (req, res) => {
-  const items = {
-    2: 2,
 
-  }
-  res.render('confirmation');
+  database.getMenuItems().then((menuItems) => {
+    // console.log("menuItem is:", menuItems);
+    const templateVars = { menuItems };
+    res.render("confirmation", templateVars);
+  })
+
+
 });
 
 
