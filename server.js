@@ -2,8 +2,8 @@
 // require('dotenv').config();    // commented this out after applying twilio
 
 const dotENV = require('dotenv');
-dotENV.config({path: "./twilio.env"});
-dotENV.config({path: "./.env"})
+dotENV.config({ path: "./twilio.env" });
+dotENV.config({ path: "./.env" })
 
 
 // Web server config
@@ -98,11 +98,16 @@ app.get('/admin', (req, res) => {
 });
 
 app.get("/cart", (req, res) => {
-  database.getMenuItems().then((menuItems) => {
-    // console.log("menuItem is:", menuItems);
-    const templateVars = { menuItems };
-    res.render("cart", templateVars);
-  })
+
+  if (req.session.userId) {
+    database.getMenuItems().then((menuItems) => {
+      // console.log("menuItem is:", menuItems);
+      const templateVars = { menuItems };
+      res.render("cart", templateVars);
+    })
+  } else {
+    res.redirect("/error_message3");
+  }
 });
 
 
@@ -122,6 +127,10 @@ app.get("/error_message", (req, res) => {
 
 app.get("/error_message2", (req, res) => {
   res.render("error_message2");
+});
+
+app.get("/error_message3", (req, res) => {
+  res.render("error_message3");
 });
 
 app.listen(PORT, () => {

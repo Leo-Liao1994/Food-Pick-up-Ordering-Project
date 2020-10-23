@@ -94,6 +94,22 @@ exports.addOrders = addOrders;
 
 
 
+const getUserId = () => {
+
+  const getUserIdQuery = `
+    SELECT users.id
+    FROM users
+    JOIN cart_items ON users.id = user_id
+  `;
+  return db.query(getUserIdQuery)
+  .then(response => response.rows[0]);
+}
+exports.getUserId = getUserId;
+
+
+
+
+
 
 
 // orders total

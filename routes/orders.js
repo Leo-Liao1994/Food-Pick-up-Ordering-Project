@@ -27,7 +27,7 @@ module.exports = (db) => {
       console.log('filtered items', validItems);
       addOrderItemQueries = validItems.map(function (menuItem) {
         const addOrdersQuery = `
-          INSERT INTO cart_items (menu_item_id, quantity)
+          INSERT INTO orders (menu_item_id, quantity)
           VALUES (${menuItem.id}, ${menuItem.qty})
           RETURNING *`;
           console.log(addOrdersQuery, 'order query is:');

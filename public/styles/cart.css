@@ -6,6 +6,14 @@ header {
   height: 100vh;
 }
 
+.append{
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(../images/background-img-cart.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(158, 147, 147, 0.1)), url(../images/background-img-cart.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+
 body{
   background:#eee;
   font-family: "montserrat";
@@ -117,4 +125,10 @@ h3{
 
 .cart-price{
   float:right;
+}
+
+.delete-item-btn{
+  background: none;
+  padding: 0px;
+  border: 0;
 }

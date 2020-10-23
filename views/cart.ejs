@@ -64,7 +64,10 @@
                     <%= item.description %>
                   </p>
                   <div class="m-t-sm">
-                    <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a>
+                    <!-- <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove item</a> -->
+                    <i class="fa fa-trash"></i>
+                    <button type="submit" class=" delete-item-btn"  data-item-price="<%= item.price%>" data-item-id=<%= item.id %>>Remove item</button>
+
                   </div>
                 </td>
                 <td>
@@ -107,3 +110,5 @@
   </div>
 </body>
 </html>
+<section class="append">
+</section>
