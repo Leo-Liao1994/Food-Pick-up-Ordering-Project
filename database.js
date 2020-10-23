@@ -81,9 +81,9 @@ exports.addItemToCart = addItemToCart;
 const addOrders = () => {
 
 const addOrdersQuery = `
-INSERT INTO orders (menu_item.id, quantity)
-VALUES ($1, $2)
-RETURNING *
+  INSERT INTO orders (menu_item.id, quantity)
+  VALUES ($1, $2)
+  RETURNING *
 `;
 
 
@@ -123,3 +123,14 @@ exports.deleteItemFromCart = deleteItemFromCart;
 
 
 
+/*
+insert into orders (user_id)
+$VALUES ($1)
+RETURNING *;
+
+
+for( item of items){
+  insert into cart_items (quantity, order_id,menu_item_id)
+  $VALUE (item.qty, item.id)
+}
+*/

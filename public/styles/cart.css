@@ -111,3 +111,10 @@ h3{
   display: block;
 }
 
+.add-item-btn{
+  float:right;
+}
+
+.cart-price{
+  float:right;
+}
