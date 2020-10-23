@@ -22,5 +22,5 @@ const textToAdmin = (orders_id) => {
 //   .then((message) => console.log(message.sid));
 
 
-module.exports = { textSender, textextToAdmin };
+module.exports = { textSender, textToAdmin };
 

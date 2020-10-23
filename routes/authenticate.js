@@ -53,9 +53,10 @@ module.exports = (db) => {
       .catch((error) => res.send(error.message));
   });
 
-  const login = function(email, password) {
+  const login = function (email, password) {
     return database.findUserByEmail(email)
       .then(user => {
+        // console.log('user in login is: ', user)
         if (bcrypt.compareSync(password, user.password)) {
           return user;
         }
@@ -66,13 +67,18 @@ module.exports = (db) => {
 
   auth.post("/login", (req, res) => {
     const { email, password } = req.body;
+    // console.log('req body inside post login: ', req.body)
     login(email, password)
       .then(user => {
+        // console.log('user inside post login .then: ', user)
         if (!user) {
           return;
+        } else if (req.body.email === "admin@delights.com") {
+          res.redirect("/admin");
+        } else {
+          req.session.userId = user.id;
+          res.redirect("/");
         }
-        req.session.userId = user.id;
-        res.redirect("/");
       })
       .catch(error => res.redirect("/error_message2"));
   });

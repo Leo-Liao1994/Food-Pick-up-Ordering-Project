@@ -4,7 +4,7 @@
       <img class="logo" src="../images/logo.png">
       <ul class="main-nav">
         <% if (user) { %>
-        <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal">Logged In As: <%= user.name %></a> </li>
+        <li> <a href="#myModalLogin" class="trigger-btn" data-toggle="modal"> <%= user.name %></a> </li>
         <form action="/logout" method="POST" class= "d-inline">
           <button class="trigger-btn logout-btn" href="/logout">Log Out</button>
         </form>
@@ -15,6 +15,7 @@
         <li> <a href="#menu" class="trigger-btn">Menu</a> </li>
         <li> <a href="#aboutUs" class="trigger-btn">About us</a> </li>
         <li> <a href="#location" class="trigger-btn">Location</a> </li>
+
       </ul>
     </nav>
     <h1 class="headertext">Sweet dreams <br>are made of these</h1>

@@ -1,6 +1,10 @@
 // load .env data into process.env
-require('dotenv').config();
-const twilio = require('twilio');
+// require('dotenv').config();    // commented this out after applying twilio
+
+const dotENV = require('dotenv');
+dotENV.config({path: "./twilio.env"});
+dotENV.config({path: "./.env"})
+
 
 // Web server config
 const PORT = process.env.PORT || 8080;
@@ -12,6 +16,9 @@ const app = express();
 const morgan = require('morgan');
 const cookieSession = require('cookie-session');
 
+//twilio router
+const twilio = express.Router();
+const { textSender } = require("./apiHelper/twilio.js")
 
 // PG database client/connection setup
 const { Pool } = require('pg');
@@ -86,6 +93,9 @@ app.get('/menu', (req, res) => {
   res.render('menu');
 });
 
+app.get('/admin', (req, res) => {
+  res.render('admin');
+});
 
 app.get("/cart", (req, res) => {
   database.getMenuItems().then((menuItems) => {
@@ -117,3 +127,14 @@ app.get("/error_message2", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
+
+
+
+
+
+
+
+
+
+
+
