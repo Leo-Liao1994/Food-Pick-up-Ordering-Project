@@ -1,15 +1,3 @@
-LHL Node Skeleton
-=========
-
-## Project Setup
-
-The following steps are only for _one_ of the group members to perform.
-
-1. Create your own copy of this repo using the `Use This Template` button, ideally using the name of your project. The repo should be marked Public
-2. Verify that the skeleton code now shows up in your repo on GitHub, you should be automatically redirected
-3. Clone your copy of the repo to your dev machine
-4. Add your team members as collaborators to the project so that they can push to this repo
-5. Let your team members know the repo URL so that they use the same repo (they should _not_ create a copy/fork of this repo since that will add additional workflow complexity to the project)
 
 
 ## Getting Started
@@ -41,3 +29,20 @@ The following steps are only for _one_ of the group members to perform.
 - Node 10.x or above
 - NPM 5.x or above
 - PG 6.x
+
+
+## Description of the App 
+
+This is a full-stack website app for a fake take-out only desert resaturant call Dleights,
+the key functions of the app include : 
+
+-  Admin sign in and sign out 
+-  User register/sign in and sign out, all user info will be saved in a database
+-  Only singed in user will be allow to access the full-menu and order
+-  Error message for non-user trying to acces the full-menu page
+-  Adim will notify when a order come in through Twilio
+
+
+##Screenshots
+
+

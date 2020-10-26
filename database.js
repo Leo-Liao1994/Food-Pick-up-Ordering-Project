@@ -136,17 +136,3 @@ const deleteItemFromCart = () => {
 
 }
 exports.deleteItemFromCart = deleteItemFromCart;
-
-
-
-/*
-insert into orders (user_id)
-$VALUES ($1)
-RETURNING *;
-
-
-for( item of items){
-  insert into cart_items (quantity, order_id,menu_item_id)
-  $VALUE (item.qty, item.id)
-}
-*/
