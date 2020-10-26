@@ -46,3 +46,8 @@ the key functions of the app include :
 ##Screenshots
 
 
+!["Screenshot"](https://github.com/Leeeeeeeeeeeeeo/Food-Pick-up-Ordering-Project/blob/master/docs/full%20menu.png)
+
+!["Screenshot"](https://github.com/Leeeeeeeeeeeeeo/Food-Pick-up-Ordering-Project/blob/master/docs/full%20menu.png)
+
+!["Screenshot"](https://github.com/Leeeeeeeeeeeeeo/Food-Pick-up-Ordering-Project/blob/master/docs/full%20menu.png)
